@@ -1,6 +1,9 @@
 var express = require('express');
 var app = express();
 // get Endpoint to create subscription  on strava
+//create the mapped tunnelendpoint agian you ssh reverse tunnel
+//ssh -R nightstrive:80:localhost:8080 serveo.net 
+// 
 app.post('/', function (req, res) {
     var responds = {
         "id": 1,
@@ -10,6 +13,7 @@ app.post('/', function (req, res) {
       }
    res.send(Status || 200);
 })
+//ssh -R nightstrive:80:localhost:8080 serveo.net 
 
 app.get('/', function (req, res) {
    console.log(req.query)
